@@ -1,0 +1,9 @@
+<servlet>
+    <servlet-name>MentorServlet</servlet-name>
+    <servlet-class>MentorServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>MentorServlet</servlet-name>
+    <url-pattern>/MentorServlet</url-pattern>
+</servlet-mapping>

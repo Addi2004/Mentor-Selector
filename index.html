@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Selector</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .mentor-details {
+            margin-top: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Mentor Selector</h1>
+        <form>
+            <div class="input-group">
+                <label for="specialisation">Choose your specialisation</label>
+                <select id="specialisation" name="specialisation">
+                    <option value="">Select a specialisation</option>
+                    <option value="Artificial Intelligence">Artificial Intelligence</option>
+                    <option value="Big Data">Big Data</option>
+                    <option value="CCVT">CCVT</option>
+                    <option value="IOT">IOT</option>
+                    <option value="Cyber Security">Cyber Security</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="areaOfStudy">Area of study</label>
+                <select id="areaOfStudy" name="areaOfStudy">
+                    <option value="">Select an area of study</option>
+                </select>
+            </div>
+            <button type="submit">Apply</button>
+        </form>
+        <div class="mentor-details">
+            <h2>Mentor Details</h2>
+            <!-- Mentor details will be fetched from the backend -->
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("specialisation").addEventListener("change", function() {
+            var areaOfStudy = document.getElementById("areaOfStudy");
+            var specialisation = this.value;
+
+            // Clear previous options
+            areaOfStudy.innerHTML = "";
+
+            if (specialisation === "Artificial Intelligence") {
+                addOptions(areaOfStudy, ["", "Geoinformatics", "Machine Learning", "AI in Healthcare"]);
+            } else if (specialisation === "Big Data") {
+                addOptions(areaOfStudy, ["", "Data Science", "Data Analytics", "Data Processing", "Hadoop"]);
+            } else if (specialisation === "CCVT") {
+                addOptions(areaOfStudy, ["", "Cloud Computing", "AWS", "Azure"]);
+            } else if (specialisation === "IOT") {
+                addOptions(areaOfStudy, ["", "Robotics", "Arduino", "Circuit Boards", "Smart Cities"]);
+            } else if (specialisation === "Cyber Security") {
+                addOptions(areaOfStudy, ["", "Ethical Hacking", "Network Security", "Ransomware"]);
+            }
+        });
+
+        function addOptions(selectElement, options) {
+            for (var i = 0; i < options.length; i++) {
+                var option = document.createElement("option");
+                option.value = options[i];
+                option.text = options[i];
+                selectElement.appendChild(option);
+            }
+        }
+    </script>
+</body>
+</html>

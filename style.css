@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    /*background-image: url('https://blog.upes.ac.in/wp-content/uploads/2022/04/campus-image-1024x555.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-blur: 10px; /* You can adjust the blur level */
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #a12828;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(45, 55, 199, 0.7); /* Background overlay color */
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+.input-group select option {
+    background-color: rgba(0, 0, 0, 0.7); /* Option background color */
+    color: #fff;
+}
+
+button {
+    background-color: #3498db;
+    color: #ddd6d6;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.mentor-details {
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.7); /* Background overlay color */
+    color: #dfd3d3;
+}
